@@ -1,5 +1,7 @@
 package studio5;
 
+import java.awt.Color;
+
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 

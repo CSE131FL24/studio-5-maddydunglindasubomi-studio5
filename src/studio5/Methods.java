@@ -1,5 +1,7 @@
 package studio5;
 
+import java.awt.Color;
+
 import edu.princeton.cs.introcs.StdDraw;
 
 public class Methods {
@@ -17,7 +19,21 @@ public class Methods {
 		double distance = 0;
 		// FIXME: Hint use Math methods (e.g. Math.sqrt) to compute the distance
 		
+		
+		//distance between (x1, y1) and (x2, y2) is equal to 
+		//sqrt((x2 - x1)^2 + (y2 - y1)^2)
+		
+		double xdistance = x2 - x1;
+		double ydistance = y2 - y1;
+		
+		double distanceSquared = Math.pow(xdistance,2)+(Math.pow(ydistance, 2));
+		
+		distance = Math.sqrt(distanceSquared);
+		
+		System.out.println(distance);
+		
 		return distance;
+		
 	}
 
 	/**
@@ -35,16 +51,19 @@ public class Methods {
 		// Blue ring with 3.0/4.0 the radius
 		// suggested rgb values: 0, 109, 219
 
-		
+		StdDraw.setPenColor(Color.BLUE);
+		StdDraw.filledCircle(x, y, radius * .75);
 
 		// Red ring with 1.0/2.0 the radius
 		// suggested rgb values: 146, 0, 0
-
+		StdDraw.setPenColor(Color.RED);
+		StdDraw.filledCircle(x, y, radius * .5);
 		
 
 		// Yellow ring with 1.0/4.0 the radius
 		// suggested rgb values: 255, 255, 109
-
+		StdDraw.setPenColor(Color.YELLOW);
+		StdDraw.filledCircle(x, y, radius * .25);
 		
 	}
 
@@ -76,6 +95,11 @@ public class Methods {
 		int sum = 0;
 		// FIXME: Compute the sum of the values in an array
 		
+		for (int i = 0; i < values.length; i++) {
+			sum = sum + values[i]; 
+			
+		}
+		System.out.println(sum);
 		return sum;
 	}
 
